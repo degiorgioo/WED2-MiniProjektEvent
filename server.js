@@ -123,7 +123,6 @@ app.use('/', express.static(__dirname + '/webapp/source'));
 app.use('/tests', express.static(__dirname + '/webapp/tests'));
 app.use('/source', express.static(__dirname + '/webapp/source'));
 
-
 /**
  * API routes
  */
