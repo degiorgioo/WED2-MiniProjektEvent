@@ -1,0 +1,13 @@
+.eventContainer{
+    border-style: solid;
+    padding: 10px;
+    margin: 10px;
+    width: 500px;
+    float: left;
+}
+
+.guestContainer{
+    border-style: solid;
+    padding: 10px;
+    margin: 10px;
+}

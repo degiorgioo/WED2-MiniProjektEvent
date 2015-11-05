@@ -2,21 +2,11 @@
 <html lang="de">
 	<head>
 		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/style.css">
 		<title>Lafete</title>
-		<!--
-		<script src="./libraries/angular/angular.min.js"></script>
-		<script src="./libraries/require/require.js"></script>
-		<script src="js/main.js"></script>
-		-->
-
 	</head>
 	<body>
-		<h1>Events</h1>
-		<div data-ng-app="lafete">
-			<div data-ng-controller="EventListController">
-				<p data-ng-repeat="event in events">{{ event.name }}</p>
-			</div>
-		</div>
+		<div data-ng-view></div>
 		<script src="libraries/require/require.js" data-main="./classes/main.js"></script>
 	</body>
 </html>

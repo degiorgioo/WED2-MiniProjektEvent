@@ -3,16 +3,22 @@ require.config({
     baseUrl: './',
     paths: {
         'angular': 'libraries/angular/angular.min',
+        'angularRoute': 'libraries/angular/angular-route',
         'app': 'classes'
     },
     // angular does not support async loading out of the box -> use the shim loader
     shim: {
         'angular': {
             exports: 'angular'
+        },
+        'angularRoute': {
+            deps: ['angular']
         }
     }
 });
 
-define(['angular','app/modules/lafete'], function (angular, lafete) {
-    return angular.bootstrap(lafete);
+require(['angular','app/modules/lafete'], function (angular, lafete) {
+    angular.element(document).ready(function(){
+        return angular.bootstrap(document, [lafete.name]);
+    });
 });
