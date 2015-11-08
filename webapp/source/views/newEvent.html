@@ -1,12 +1,24 @@
 <div data-ng-controller="NewEventController">
     <h1>ADD NEW EVENT</h1>
-    <label for="eventname">Eventname</label><input ng-model="eventname" type="text" id="eventname"></br>
-    <label for="description">Description</label><input ng-model="description" type="text" id="description"></br>
-    <label for="targetGroup">Target Group</label><input ng-model="target" type="text" id="targetGroup"></br>
-    <label for="locationname">Location name</label><input ng-model="locationname" type="text" id="locationname"></br>
-    <label for="locationstreet">Location street</label><input ng-model="locationstreet" type="text" id="locationstreet"></br>
-    <label for="locationplz">Location plz</label><input ng-model="locationplz" type="text" id="locationplz"></br>
-    <label for="locationcity">Location city</label><input ng-model="locationcity" type="text" id="locationcity"></br>
-    <label for="eventbegin">Event begin</label><input ng-model="eventbegin" type="text" id="eventbegin"></br>
-    <label for="eventend">Event end</label><input ng-model="eventend" type="text" id="eventend"></br>
+    <label for="eventname">Eventname</label>
+    <input ng-model="eventname" type="text" id="eventname"></br>
+    <label for="description">Description</label>
+    <input ng-model="description" type="text" id="description"></br>
+    <label for="targetGroup">Target Group</label>
+    <input ng-model="target" type="text" id="targetGroup"></br>
+    <label for="contribution">Contribution</label>
+    <input ng-model="contribution" type="text" id="contribution"></br>
+    <label for="locationname">Location name</label>
+    <input ng-model="locationname" type="text" id="locationname"></br>
+    <label for="locationstreet">Location street</label>
+    <input ng-model="locationstreet" type="text" id="locationstreet"></br>
+    <label for="locationplz">Location plz</label>
+    <input ng-model="locationplz" type="text" id="locationplz"></br>
+    <label for="locationcity">Location city</label>
+    <input ng-model="locationcity" type="text" id="locationcity"></br>
+    <label for="eventbegin">Event begin</label>
+    <input ng-model="eventbegin" type="date" id="eventbegin"></br>
+    <label for="eventend">Event end</label>
+    <input ng-model="eventend" type="date" id="eventend"></br>
+    <input type="button" value="create new Event" ng-click="addNewEventInRepo(eventname, description, target, contribution ,locationname, locationstreet, locationplz, locationcity, eventbegin, eventend)">
 </div>

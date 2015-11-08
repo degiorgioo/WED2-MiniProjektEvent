@@ -4,6 +4,5 @@ define([], function () {
             url: "http://localhost:8080",
             viewsPath: "../"
         }
-
     }
 });

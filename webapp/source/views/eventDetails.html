@@ -8,8 +8,8 @@
     <p>{{ event.location.plz }}</p>
     <p>{{ event.location.city }}</p>
     <h2>Information</h2>
-    <p>Beginn: {{ event.times.begin }}</p>
-    <p>Ende: {{ event.times.end }}</p>
+    <p>Beginn: {{ event.times.begin | date: 'yyyy-MM-dd'}}</p>
+    <p>Ende: {{ event.times.end | date: 'yyyy-MM-dd'}}</p>
     <h2>Gäste</h2>
     <div data-ng-repeat="guest in event.guests">
         <p>Name: {{ guest.name }}</p>

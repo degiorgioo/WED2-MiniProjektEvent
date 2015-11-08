@@ -1,19 +1,22 @@
 <form action="#/newEvent" method="get">
     <input type="submit" value="add Event">
 </form>
+<form action="#/updateEvent" method="get">
+    <input type="submit" value="update Event">
+</form>
 <div data-ng-controller="EventListController">
     <div class="eventContainer" data-ng-repeat="event in events">
         <h1>{{ event.name }}</h1>
-        <p>{{ event.description }}</p>
-        <p>{{ event.targetGroup }}</p>
+        <p>Description: {{ event.description }}</p>
+        <p>Für wen: {{ event.targetGroup }}</p>
         <h2>location</h2>
-        <p>{{ event.location.name }}</p>
-        <p>{{ event.location.street }}</p>
-        <p>{{ event.location.plz }}</p>
-        <p>{{ event.location.city }}</p>
+        <p>Ort: {{ event.location.name }}</p>
+        <p>Strasse: {{ event.location.street }}</p>
+        <p>PLZ: {{ event.location.plz }}</p>
+        <p>City: {{ event.location.city }}</p>
         <h2>Information</h2>
-        <p>Beginn: {{ event.times.begin }}</p>
-        <p>Ende: {{ event.times.end }}</p>
+        <p>Beginn: {{ event.times.begin | date: 'yyyy-MM-dd' }}</p>
+        <p>Ende: {{ event.times.end  | date: 'yyyy-MM-dd' }}</p>
         <h2>Gäste</h2>
             <div class="guestContainer" data-ng-repeat="guest in event.guests">
                 <p>Name: {{ guest.name }}</p>

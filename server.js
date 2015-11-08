@@ -83,8 +83,8 @@ var event1 = createEvent(
         city: "Rapperswil"
     },
     {
-        begin: new Date('2015-11-15T19:00:00'),
-        end: new Date('2011-11-16T03:00:00')
+        begin: new Date(2015, 9, 22),
+        end: new Date(2015, 9, 23)
     }
 );
 createGuest(event1, null, "Michael", "Schoggi-Kuchen", "Bin sicher zu früh" );
@@ -103,8 +103,8 @@ var event2 = createEvent(
         city: "Rapperswil"
     },
     {
-        begin: new Date('2015-11-20T18:00:00'),
-        end: new Date('2011-11-20T21:00:00')
+        begin: new Date(2015, 9, 22),
+        end: new Date(2015, 9, 23)
     }
 );
 

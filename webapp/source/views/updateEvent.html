@@ -1,0 +1,30 @@
+<div data-ng-controller="UpdateEventController">
+    <select ng-model="event" ng-options="event.name for event in events" ng-change="pinCurrentEventToScope(event)">
+    </select>
+    <div>
+        <h1>Event information</h1>
+        <p>Event name</p>
+        <input type="text" ng-model="event.name"></br>
+        <p>Event description</p>
+        <input type="text" ng-model="event.description"></br>
+        <p>Event guests</p>
+        <input type="text" ng-model="event.targetGroup">
+        <h2>location</h2>
+        <p>Location name</p>
+        <input type="text" ng-model="event.location.name">
+        <p>Location street</p>
+        <input type="text" ng-model="event.location.street">
+        <p>Location PLZ</p>
+        <input type="text" ng-model="event.location.plz">
+        <p>Location city</p>
+        <input type="text" ng-model="event.location.city">
+        <h2>times</h2>
+        <p>Begin</p>
+        <input type="date" ng-model="event.times.begin">
+        <p>End</p>
+        <input type="date" ng-model="event.times.end">
+    </div>
+    </br>
+    <input type="Button" value="update Event information" ng-click="updateEventInformation()">
+</div>
+</div>

@@ -22,5 +22,25 @@ define([], function () {
                 }
             );
         };
+
+        this.addEvent = function(event){
+            $http.post( 'http://localhost:8080/api/events/', event).
+                success(function(data){
+                    console.log(data);
+                }).
+                error(function(data){
+                    console.log(data);
+                })
+        };
+
+        this.updateEvent = function(id, event){
+            $http.post( 'http://localhost:8080/api/events/' + id, event).
+                success(function(data){
+                    console.log(data);
+                }).
+                error(function(data){
+                    console.log(data);
+                })
+        }
     };
 });
