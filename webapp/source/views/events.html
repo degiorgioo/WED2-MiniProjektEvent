@@ -11,13 +11,5 @@
         <h2>Information</h2>
         <p>Beginn: {{ event.times.begin | date: 'yyyy-MM-dd' }} Time: {{ event.times.begin | date: 'hh-mm' }}</p>
         <p>Ende: {{ event.times.end  | date: 'yyyy-MM-dd' }} Time: {{ event.times.end | date: 'hh-mm' }}</p>
-        <h2>Gäste</h2>
-            <div class="guestContainer" data-ng-repeat="guest in event.guests">
-                <p>Name: {{ guest.name }}</p>
-                <p>Nimmt mit: {{ guest.contribution }}</p>
-                <p>Kommentar: {{ guest.comment }}</p>
-                <p>Komme nicht: {{ guest.canceled }}</p>
-            </div>
-        </div>
     </div>
 </div>

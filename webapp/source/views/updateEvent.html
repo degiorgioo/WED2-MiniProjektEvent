@@ -1,30 +1,38 @@
 <div data-ng-controller="UpdateEventController">
-    <select ng-model="event" ng-options="event.name for event in events" ng-change="pinCurrentEventToScope(event)">
-    </select>
     <div>
+        <div class="jumbotron">
+            <h1>Update event</h1>
+        </div>
+        <select ng-model="event" ng-options="event.name for event in events" ng-change="pinCurrentEventToScope(event)">
+        </select>
         <h1>Event information</h1>
-        <p>Event name</p>
-        <input type="text" ng-model="event.name"></br>
-        <p>Event description</p>
-        <input type="text" ng-model="event.description"></br>
-        <p>Event guests</p>
-        <input type="text" ng-model="event.targetGroup">
-        <h2>location</h2>
-        <p>Location name</p>
-        <input type="text" ng-model="event.location.name">
-        <p>Location street</p>
-        <input type="text" ng-model="event.location.street">
-        <p>Location PLZ</p>
-        <input type="text" ng-model="event.location.plz">
-        <p>Location city</p>
-        <input type="text" ng-model="event.location.city">
-        <h2>times</h2>
-        <p>Begin</p>
-        <input type="datetime-local" ng-model="event.times.begin">
-        <p>End</p>
-        <input type="datetime-local" ng-model="event.times.end">
+        <label class="label label-default" for="eventname">Eventname</label>
+        <input class="form-control" id="eventname" type="text" ng-model="event.name"></br>
+        <label class="label label-default" for="description">description</label>
+        <input class="form-control" id="description" type="text" ng-model="event.description"></br>
+        <label class="label label-default" for="target">Target group</label>
+        <input class="form-control" id="target" type="text" ng-model="event.targetGroup">
+        <h2>Location</h2>
+        <label class="label label-default" for="location">Location name</label>
+        <input class="form-control" id="location" type="text" ng-model="event.location.name">
+        <label class="label label-default" for="locationstreet">Location street</label>
+        <input class="form-control" id="locationstreet" type="text" ng-model="event.location.street">
+        <label class="label label-default" for="locationplz">PLZ</label>
+        <input class="form-control" id="locationplz" type="text" ng-model="event.location.plz">
+        <label class="label label-default" for="locationcity">Location city</label>
+        <input class="form-control" id="locationcity" type="text" ng-model="event.location.city">
+        <h2>Times</h2>
+        <label class="label label-default" for="timebegin">Time begin</label>
+        <input class="form-control" id="timebegin" type="datetime-local" ng-model="event.times.begin">
+        <label class="label label-default" for="timeend">Time end</label>
+        <input class="form-control" id="timeend" type="datetime-local" ng-model="event.times.end">
     </div>
     </br>
-    <input type="Button" value="update Event information" ng-click="updateEventInformation()">
+    <button class="btn btn-sm btn-default" type="Button" ng-click="updateEventInformation()">Update Event</button>
+
+    <div class="alert alert-success" ng-show="eventUpdated">
+        <strong>Well done!</strong> Event successfully updated.
+    </div>
+
 </div>
 </div>

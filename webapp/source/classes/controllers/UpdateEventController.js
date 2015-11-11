@@ -1,6 +1,9 @@
 //UpdateEventController
 define(['app/services/EventRepository'], function () {
     return function($scope, EventRepository){
+
+        $scope.eventUpdated = false;
+
         EventRepository.getAllEvents(function(data){
             $scope.events = data;
             $scope.event = data[0];
@@ -32,6 +35,8 @@ define(['app/services/EventRepository'], function () {
                     begin: new Date($scope.event.times.begin),
                     end: new Date($scope.event.times.end)
                 }
+            }, function(successfullOrNot){
+                $scope.eventUpdated = successfullOrNot;
             });
         }
     };

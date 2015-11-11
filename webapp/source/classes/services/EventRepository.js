@@ -12,10 +12,10 @@ define([], function () {
             );
         };
 
-        this.getEventById = function( id , successCallback ){
+        this.getEventById = function( id , callback ){
             $http.get( 'http://localhost:8080/api/events/' + id )
                 .success(function (data) {
-                    successCallback(data);
+                    callback(data);
                 })
                 .error(function () {
                     console.log("query not successfull");
@@ -23,34 +23,39 @@ define([], function () {
             );
         };
 
-        this.addEvent = function(event){
+        this.addEvent = function(event, callback){
             $http.post( 'http://localhost:8080/api/events/', event).
                 success(function(data){
                     console.log(data);
+                    callback(true);
                 }).
                 error(function(data){
                     console.log(data);
+                    callback(false);
                 })
         };
 
-        this.addGuestToEvent = function(id, guest){
-            console.log("i was here");
+        this.addGuestToEvent = function(id, guest, callback){
             $http.post('http://localhost:8080/api/events/'+ id +'/guests', guest)
                 .success(function(data){
                     console.log(data);
+                    callback(true);
                 }).
                 error(function(data){
                     console.log(data);
+                    callback(false);
                 });
         };
 
-        this.updateEvent = function(id, event){
+        this.updateEvent = function(id, event, callback){
             $http.post( 'http://localhost:8080/api/events/' + id, event).
                 success(function(data){
                     console.log(data);
+                    callback(true);
                 }).
                 error(function(data){
                     console.log(data);
+                    callback(false);
                 })
         }
     };
