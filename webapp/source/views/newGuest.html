@@ -1,0 +1,12 @@
+<div data-ng-controller="NewGuestController">
+    <div class="jumbotron">
+        <h1>ADD NEW GUEST</h1>
+    </div>
+    <label for="guestname">Guestname</label>
+    <input ng-model="guestname" type="text" id="guestname"></br>
+    <label for="contribution">contribution</label>
+    <input ng-model="contribution" type="text" id="contribution"></br>
+    <label for="comment">Comment</label>
+    <input ng-model="comment" type="text" id="comment"></br>
+    <button class="btn btn-sm btn-default" type="button" ng-click="addNewGuestToEvent(guestname, contribution, comment)">Add new guest</button>
+</div>

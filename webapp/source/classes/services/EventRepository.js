@@ -33,6 +33,17 @@ define([], function () {
                 })
         };
 
+        this.addGuestToEvent = function(id, guest){
+            console.log("i was here");
+            $http.post('http://localhost:8080/api/events/'+ id +'/guests', guest)
+                .success(function(data){
+                    console.log(data);
+                }).
+                error(function(data){
+                    console.log(data);
+                });
+        };
+
         this.updateEvent = function(id, event){
             $http.post( 'http://localhost:8080/api/events/' + id, event).
                 success(function(data){

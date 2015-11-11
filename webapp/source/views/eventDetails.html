@@ -1,5 +1,5 @@
-<div data-ng-controller="EventController">
-    <h1>{{ event.name }}</h1>
+<div class="eventContainer" data-ng-controller="EventController">
+    <h1>{{ event.name }} - Number of guests: {{ numberOfGuests }} </h1>
     <p>{{ event.description }}</p>
     <p>{{ event.targetGroup }}</p>
     <h2>location</h2>
@@ -11,7 +11,10 @@
     <p>Beginn: {{ event.times.begin | date: 'yyyy-MM-dd'}}</p>
     <p>Ende: {{ event.times.end | date: 'yyyy-MM-dd'}}</p>
     <h2>Gäste</h2>
-    <div data-ng-repeat="guest in event.guests">
+    <form action="{{ '#/newGuest/Event/' +  event.id }}" method="get">
+        <button class="btn btn-sm btn-default" type="submit">add new Guest</button>
+    </form>
+    <div class="guestContainer" data-ng-repeat="guest in event.guests">
         <p>Name: {{ guest.name }}</p>
         <p>Nimmt mit: {{ guest.contribution }}</p>
         <p>Kommentar: {{ guest.comment }}</p>

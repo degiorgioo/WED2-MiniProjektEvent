@@ -11,9 +11,8 @@ define(['app/services/EventRepository'], function () {
 
         $scope.pinCurrentEventToScope = function(event){
             $scope.event = event;
-            console.log($scope.event);
-            console.log(new Date($scope.event.times.begin));
-
+            $scope.event.times.begin = new Date(event.times.begin);
+            $scope.event.times.end = new Date(event.times.end);
         };
 
         $scope.updateEventInformation = function(){
