@@ -1,61 +1,55 @@
 define([], function () {
     return function ($http) {
         //do some magic here
-        this.getAllEvents = function( successCallback ){
+        this.getAllEvents = function( successCallback, errorCallback ){
             $http.get( 'http://localhost:8080/api/events' )
                 .success(function (data) {
                     successCallback(data.events);
                 })
                 .error(function () {
-                    console.log("query not successfull");
+                    errorCallback();
                 }
             );
         };
 
-        this.getEventById = function( id , callback ){
+        this.getEventById = function( id , successCallback, errorCallback ){
             $http.get( 'http://localhost:8080/api/events/' + id )
                 .success(function (data) {
-                    callback(data);
+                    successCallback(data);
                 })
                 .error(function () {
-                    console.log("query not successfull");
+                    errorCallback();
                 }
             );
         };
 
-        this.addEvent = function(event, callback){
+        this.addEvent = function(event, successCallback, errorCallback ){
             $http.post( 'http://localhost:8080/api/events/', event).
-                success(function(data){
-                    console.log(data);
-                    callback(true);
+                success(function(){
+                    successCallback();
                 }).
-                error(function(data){
-                    console.log(data);
-                    callback(false);
+                error(function(){
+                    errorCallback();
                 })
         };
 
-        this.addGuestToEvent = function(id, guest, callback){
+        this.addGuestToEvent = function(id, guest, successCallback, errorCallback ){
             $http.post('http://localhost:8080/api/events/'+ id +'/guests', guest)
-                .success(function(data){
-                    console.log(data);
-                    callback(true);
+                .success(function(){
+                    successCallback();
                 }).
-                error(function(data){
-                    console.log(data);
-                    callback(false);
+                error(function(){
+                    errorCallback();
                 });
         };
 
-        this.updateEvent = function(id, event, callback){
+        this.updateEvent = function(id, event, successCallback, errorCallback ){
             $http.post( 'http://localhost:8080/api/events/' + id, event).
-                success(function(data){
-                    console.log(data);
-                    callback(true);
+                success(function(){
+                    successCallback();
                 }).
-                error(function(data){
-                    console.log(data);
-                    callback(false);
+                error(function(){
+                    errorCallback();
                 })
         }
     };

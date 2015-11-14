@@ -2,28 +2,29 @@
 define(['app/services/EventRepository'], function () {
     return function($scope, EventRepository){
         //some kind of magic i don't know
+        $scope.successfullAddNewEvent = false;
+        $scope.errorAddNewEvent = false;
 
-        $scope.newEventAdded = false;
-
-        $scope.addNewEventInRepo = function(eventname, description, target, contribution ,locationname, locationstreet, locationplz, locationcity, eventbegin, eventend){
+        $scope.addNewEventInRepo = function(){
             EventRepository.addEvent({
                 id: '',
-                name: eventname,
-                description: description,
-                targetGroup: target,
-                contributionDescription: contribution,
+                name: $scope.eventname,
+                description: $scope.description,
+                targetGroup: $scope.target,
                 location: {
-                    name: locationname,
-                    street: locationstreet,
-                    plz: locationplz,
-                    city: locationcity
+                    name: $scope.locationname,
+                    street: $scope.locationstreet,
+                    plz: $scope.locationplz,
+                    city: $scope.locationcity
                 },
                 times: {
-                    begin: new Date(eventbegin),
-                    end: new Date(eventend)
+                    begin: new Date($scope.eventbegin),
+                    end: new Date($scope.eventend)
                 }
-            }, function(successfullOrNot){
-                $scope.newEventAdded = successfullOrNot;
+            }, function(){
+                $scope.successfullAddNewEvent = true;
+            }, function(){
+                $scope.errorAddNewEvent = true;
             });
         };
 

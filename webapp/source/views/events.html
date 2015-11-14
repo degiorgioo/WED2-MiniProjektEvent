@@ -1,5 +1,5 @@
 <div data-ng-controller="EventListController">
-    <div class="eventContainer" data-ng-repeat="event in events" ng-click="onClick()">
+    <div class="eventContainer" data-ng-repeat="event in events" ng-click="onClickEventContainer()">
         <h1>{{ event.name }}</h1>
         <p>Description: {{ event.description }}</p>
         <p>Für wen: {{ event.targetGroup }}</p>
@@ -12,4 +12,10 @@
         <p>Beginn: {{ event.times.begin | date: 'yyyy-MM-dd' }} Time: {{ event.times.begin | date: 'hh-mm' }}</p>
         <p>Ende: {{ event.times.end  | date: 'yyyy-MM-dd' }} Time: {{ event.times.end | date: 'hh-mm' }}</p>
     </div>
+
+    <div class="alert alert-danger" ng-show="errorGetAllEvents">
+    <strong>Sorry my Friend!</strong> The eventlist could not be loaded.
+</div>
+
+
 </div>

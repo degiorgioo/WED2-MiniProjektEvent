@@ -2,7 +2,8 @@
 define(['app/services/EventRepository'], function () {
     return function($scope, EventRepository){
 
-        $scope.eventUpdated = false;
+        $scope.successfullEventUpdated = false;
+        $scope.errorUpdatingEvent = false;
 
         EventRepository.getAllEvents(function(data){
             $scope.events = data;
@@ -24,7 +25,7 @@ define(['app/services/EventRepository'], function () {
                 name: $scope.event.name,
                 description: $scope.event.description,
                 targetGroup: $scope.event.targetGroup,
-                contributionDescription: $scope.event.contributionDescription,
+                maxNumberGuests: $scope.event.maxNumberGuests,
                 location: {
                     name: $scope.event.location.name,
                     street: $scope.event.location.street,
@@ -35,8 +36,10 @@ define(['app/services/EventRepository'], function () {
                     begin: new Date($scope.event.times.begin),
                     end: new Date($scope.event.times.end)
                 }
-            }, function(successfullOrNot){
-                $scope.eventUpdated = successfullOrNot;
+            }, function(){
+                $scope.successfullEventUpdated = true;
+            }, function(){
+                $scope.errorUpdatingEvent = true;
             });
         }
     };

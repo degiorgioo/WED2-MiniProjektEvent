@@ -8,8 +8,6 @@
         <input class="form-control" ng-model="description" type="text" id="description"></br>
         <label class="label label-default" for="targetGroup">Target Group</label>
         <input class="form-control" ng-model="target" type="text" id="targetGroup"></br>
-        <label class="label label-default" for="contribution">Contribution</label>
-        <input class="form-control" ng-model="contribution" type="text" id="contribution"></br>
         <label class="label label-default" for="locationname">Location name</label>
         <input class="form-control" ng-model="locationname" type="text" id="locationname"></br>
         <label class="label label-default" for="locationstreet">Location street</label>
@@ -22,9 +20,16 @@
         <input class="form-control" ng-model="eventbegin" type="datetime-local" id="eventbegin"></br>
         <label class="label label-default" for="eventend">Event end</label>
         <input class="form-control" ng-model="eventend" type="datetime-local" id="eventend"></br>
-        <button class="btn btn-sm btn-default" type="button" ng-click="addNewEventInRepo(eventname, description, target, contribution ,locationname, locationstreet, locationplz, locationcity, eventbegin, eventend)">Create new Event</button>
+        <button class="btn btn-sm btn-default" type="button" ng-click="addNewEventInRepo()">Create new Event</button>
 
-    <div class="alert alert-success" ng-show="newEventAdded">
+    <div class="alert alert-success" ng-show="successfullAddNewEvent">
         <strong>Well done!</strong> Event successfully added.
     </div>
+
+    <div class="alert alert-success" ng-show="errorAddNewEvent">
+        <strong>Well done!</strong> Event successfully added.
+    </div>
+
+
+
 </div>

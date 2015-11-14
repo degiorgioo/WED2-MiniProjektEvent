@@ -12,6 +12,8 @@
         <input class="form-control" id="description" type="text" ng-model="event.description"></br>
         <label class="label label-default" for="target">Target group</label>
         <input class="form-control" id="target" type="text" ng-model="event.targetGroup">
+        <label class="label label-default" for="maxGuesttNumber">Max Guest Number</label>
+        <input class="form-control" id="maxGuesttNumber" type="text" ng-model="event.maxNumberGuests"></br>
         <h2>Location</h2>
         <label class="label label-default" for="location">Location name</label>
         <input class="form-control" id="location" type="text" ng-model="event.location.name">
@@ -32,6 +34,10 @@
 
     <div class="alert alert-success" ng-show="eventUpdated">
         <strong>Well done!</strong> Event successfully updated.
+    </div>
+
+    <div class="alert alert-danger" ng-show="errorUpdatingEvent">
+        <strong>Sorry my Friend!</strong> The event could not be updated.
     </div>
 
 </div>

@@ -1,12 +1,16 @@
 //EventListController
 define(['app/services/EventRepository'], function () {
     return function($scope, EventRepository, $location){
+
+        $scope.errorGetAllEvents = false;
+
         EventRepository.getAllEvents(function(data){
             $scope.events = data;
+        }, function () {
+            $scope.errorGetAllEvents = true;
         });
 
-        $scope.onClick = function(){
-            console.log(this.event.id);
+        $scope.onClickEventContainer = function(){
             $location.path('event/' + this.event.id);
         }
 
