@@ -1,4 +1,4 @@
-define(['angular', 'app/controllers/EventListController', 'app/controllers/EventController','app/controllers/NewEventController' , 'app/controllers/NewGuestController' ,'app/controllers/UpdateEventController' ,'app/services/EventRepository', 'app/models/Event' ,'angularRoute'], function (Angular,EventListController,EventController,NewEventController,NewGuestController,UpdateEventController,EventRepository, Event) {
+define(['angular', 'app/controllers/EventListController', 'app/controllers/EventController', 'app/controllers/NavigationController','app/controllers/NewEventController' , 'app/controllers/NewGuestController' ,'app/controllers/UpdateEventController' ,'app/services/EventRepository', 'app/models/Event' ,'angularRoute'], function (Angular,EventListController,EventController,NavigationController,NewEventController,NewGuestController,UpdateEventController,EventRepository, Event) {
 
     var Lafete = Angular.module('lafete',['ngRoute']);
 
@@ -8,6 +8,7 @@ define(['angular', 'app/controllers/EventListController', 'app/controllers/Event
     NewEventController.$inject = ['$scope', 'EventRepository'];
     NewGuestController.$inject = ['$scope', 'EventRepository', '$routeParams'];
     UpdateEventController.$inject = ['$scope', 'EventRepository'];
+    NavigationController.$inject = ['$scope'];
 
     //set controllers
     Lafete.controller('EventListController', EventListController);
@@ -15,6 +16,7 @@ define(['angular', 'app/controllers/EventListController', 'app/controllers/Event
     Lafete.controller('NewEventController', NewEventController);
     Lafete.controller('NewGuestController', NewGuestController);
     Lafete.controller('UpdateEventController', UpdateEventController);
+    Lafete.controller('NavigationController', NavigationController);
 
     //set service
     Lafete.service('EventRepository', EventRepository);
