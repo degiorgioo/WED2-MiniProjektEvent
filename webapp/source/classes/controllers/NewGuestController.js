@@ -1,6 +1,7 @@
 //NewGuestController
-define(['app/services/EventRepository'], function () {
-    return function($scope, EventRepository, $routeParams){
+define([], function () {
+
+    var NewGuestController = function($scope, EventRepository, $routeParams){
         //some kind of magic..i don't know
         var eventID = $routeParams.eventId;
         $scope.guestAdded = false;
@@ -18,4 +19,8 @@ define(['app/services/EventRepository'], function () {
             })
         }
     };
+
+    NewGuestController.$inject = ['$scope', 'EventRepository', '$routeParams'];
+
+    return NewGuestController;
 });

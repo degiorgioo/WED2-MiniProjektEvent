@@ -1,7 +1,8 @@
 //NewEventController
-define(['app/services/EventRepository'], function () {
-    return function($scope, EventRepository){
-        //some kind of magic i don't know
+define([], function () {
+
+    var NewEventController = function($scope, EventRepository){
+
         $scope.successfullAddNewEvent = false;
         $scope.errorAddNewEvent = false;
 
@@ -27,6 +28,9 @@ define(['app/services/EventRepository'], function () {
                 $scope.errorAddNewEvent = true;
             });
         };
-
     };
+
+    NewEventController.$inject = ['$scope', 'EventRepository'];
+
+    return NewEventController;
 });

@@ -1,6 +1,6 @@
-//NewGuestController
-define(['app/services/EventRepository'], function () {
-    return function($scope, EventRepository, $routeParams){
+//UpdateGuestController
+define([], function () {
+    var UpdateGuestController =  function($scope, EventRepository, $routeParams){
         showMessage();
         EventRepository.getGuestById($routeParams.eventId, $routeParams.guestId,function(guest){
             console.log(guest);
@@ -14,7 +14,6 @@ define(['app/services/EventRepository'], function () {
                 comment: $scope.guest.comment
             }, function(){
                 showMessage('guestUpdated');
-
             }, function(){
                 showMessage('errorUpdatingGuest');
             })
@@ -50,4 +49,7 @@ define(['app/services/EventRepository'], function () {
             }
         }
     };
+    UpdateGuestController.$inject = ['$scope', 'EventRepository', '$routeParams'];
+
+    return UpdateGuestController;
 });

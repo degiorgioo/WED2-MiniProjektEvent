@@ -1,6 +1,7 @@
 //EventController
 define([], function () {
-    return function($scope, EventRepository, $routeParams){
+
+    var EventController = function($scope, EventRepository, $routeParams){
         var eventId = $routeParams.eventId;
 
         $scope.errorLoadEvent = false;
@@ -11,7 +12,9 @@ define([], function () {
         }, function(){
             $scope.errorLoadEvent = true;
         });
-
-
     };
+
+    EventController.$inject = ['$scope', 'EventRepository', '$routeParams'];
+
+    return EventController;
 });

@@ -1,6 +1,6 @@
 //NavigationController
 define([], function(){
-    return function($scope){
+    var NavigationController =  function($scope){
 
         var isMobileExpanded = false;
 
@@ -41,4 +41,9 @@ define([], function(){
             isMobileExpanded = true;
         };
     }
+
+    NavigationController.$inject = ['$scope'];
+
+    return NavigationController;
+
 });

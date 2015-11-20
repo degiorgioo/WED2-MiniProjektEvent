@@ -1,6 +1,6 @@
 //UpdateEventController
-define(['app/services/EventRepository'], function () {
-    return function($scope, EventRepository){
+define([], function () {
+    var UpdateEventController =  function($scope, EventRepository){
 
         $scope.successfullEventUpdated = false;
         $scope.errorUpdatingEvent = false;
@@ -43,4 +43,8 @@ define(['app/services/EventRepository'], function () {
             });
         }
     };
+
+    UpdateEventController.$inject = ['$scope', 'EventRepository'];
+
+    return UpdateEventController;
 });

@@ -1,7 +1,7 @@
 //EventListController
-define(['app/services/EventRepository'], function () {
-    return function($scope, EventRepository, $location){
+define([], function () {
 
+    var EventListController = function($scope, EventRepository, $location){
         $scope.errorGetAllEvents = false;
 
         EventRepository.getAllEvents(function(data){
@@ -13,6 +13,10 @@ define(['app/services/EventRepository'], function () {
         $scope.onClickEventContainer = function(){
             $location.path('event/' + this.event.id);
         }
-
     };
+
+    EventListController.$inject = ['$scope', 'EventRepository', '$location'];
+
+    return EventListController;
+
 });
