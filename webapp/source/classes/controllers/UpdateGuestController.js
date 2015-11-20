@@ -1,26 +1,53 @@
 //NewGuestController
 define(['app/services/EventRepository'], function () {
     return function($scope, EventRepository, $routeParams){
-        $scope.guestUpdated = false;
-        $scope.errorUpdatingGuest = false;
+        showMessage();
         EventRepository.getGuestById($routeParams.eventId, $routeParams.guestId,function(guest){
             console.log(guest);
             $scope.guest = guest;
         } );
 
-        $scope.UpdateGuestInformation = function(){
+        $scope.updateGuestInformation = function(){
             EventRepository.updateGuest($routeParams.eventId, $routeParams.guestId, {
                 name: $scope.guest.name,
                 contribution: $scope.guest.contribution,
                 comment: $scope.guest.comment
             }, function(){
-                $scope.guestUpdated = true;
-                $scope.errorUpdatingGuest = false;
+                showMessage('guestUpdated');
 
             }, function(){
-                $scope.errorUpdatingGuest = true;
-                $scope.guestUpdated = false;
+                showMessage('errorUpdatingGuest');
             })
+        };
+        $scope.cancelGuest = function(){
+            EventRepository.cancelGuest($routeParams.eventId, $routeParams.guestId, {
+                canceled: true
+            }, function(){
+                showMessage('guestCanceled');
+            }, function(){
+                showMessage('errorCancelingGuest');
+            })
+        };
+
+        function showMessage(message){
+            $scope.guestUpdated = false;
+            $scope.errorUpdatingGuest = false;
+            $scope.errorCancelingGuest = false;
+            $scope.guestCanceled = false;
+            switch(message){
+                case 'guestUpdated':
+                    $scope.guestUpdated = true;
+                    break;
+                case 'guestCanceled':
+                    $scope.guestCanceled = true;
+                    break;
+                case 'errorUpdatingGuest':
+                    $scope.errorUpdatingGuest = true;
+                    break;
+                case 'errorCancelingGuest':
+                    $scope.errorCancelingGuest = true;
+                    break;
+            }
         }
     };
 });

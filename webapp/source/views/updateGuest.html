@@ -14,7 +14,8 @@
         <input class="form-control" id="comment" type="text" ng-model="guest.comment">
     </div>
     <br>
-    <button class="btn btn-sm btn-default" type="Button" ng-click="UpdateGuestInformation()">Update Guest</button>
+    <button class="btn btn-sm btn-default" type="Button" ng-click="updateGuestInformation()">Update Guest</button>
+    <button class="btn btn-sm btn-default" type="Button" ng-click="cancelGuest()">Cancel Reservation</button>
 
     <div class="alert alert-success" ng-show="guestUpdated">
         <strong>Well done!</strong> Guest successfully updated.
@@ -22,6 +23,14 @@
 
     <div class="alert alert-danger" ng-show="errorUpdatingGuest">
         <strong>Sorry my Friend!</strong> The guest could not be updated.
+    </div>
+
+    <div class="alert alert-success" ng-show="guestCanceled">
+        <strong>Well done!</strong> Guest successfully canceled.
+    </div>
+
+    <div class="alert alert-danger" ng-show="errorCancelingGuest">
+        <strong>Sorry my Friend!</strong> The guest could not be canceled.
     </div>
 
 </div>

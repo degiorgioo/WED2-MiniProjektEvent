@@ -71,5 +71,14 @@ define([], function () {
                 errorCallback();
             })
         };
+        this.cancelGuest = function( eventId, guestId, guest, successCallback, errorCallback ){
+            $http.post( 'http://localhost:8080/api/events/' + eventId + '/guests/' + guestId, guest).
+            success(function(){
+                successCallback();
+            }).
+            error(function(){
+                errorCallback();
+            })
+        };
     };
 });

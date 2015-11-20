@@ -29,12 +29,10 @@ define(['angular', 'app/controllers/EventListController', 'app/controllers/Event
             when('/',{
                 controller: 'EventListController',
                 templateUrl: '../views/events.html'
-            })
-            .when('/event/:eventId', {
+            }).when('/event/:eventId', {
                 controller: 'EventController',
                 templateUrl: '../views/eventDetails.html'
-            })
-            .when('/newEvent', {
+            }).when('/newEvent', {
                 controller: 'NewEventController',
                 templateUrl: '../views/newEvent.html'
             }).when('/updateEvent', {
@@ -46,7 +44,7 @@ define(['angular', 'app/controllers/EventListController', 'app/controllers/Event
             }).when('/updateGuest/Event/:eventId/Guest/:guestId', {
                 controller: 'UpdateGuestController',
                 templateUrl: '../views/updateGuest.html'
-        })
+            })
     });
 
     return Lafete;
