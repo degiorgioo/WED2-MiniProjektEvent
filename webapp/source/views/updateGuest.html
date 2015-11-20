@@ -1,0 +1,27 @@
+<div data-ng-controller="UpdateGuestController">
+    <div>
+        <div class="jumbotron">
+            <h1>Update guest</h1>
+        </div>
+        <h1>Guest information</h1>
+        <label class="label label-default" for="guestname">Guest name</label>
+        <input class="form-control" id="guestname" type="text" ng-model="guest.name">
+        <br>
+        <label class="label label-default" for="contribution">Contribution</label>
+        <input class="form-control" id="contribution" type="text" ng-model="guest.contribution">
+        <br>
+        <label class="label label-default" for="comment">Comment</label>
+        <input class="form-control" id="comment" type="text" ng-model="guest.comment">
+    </div>
+    <br>
+    <button class="btn btn-sm btn-default" type="Button" ng-click="UpdateGuestInformation()">Update Guest</button>
+
+    <div class="alert alert-success" ng-show="guestUpdated">
+        <strong>Well done!</strong> Guest successfully updated.
+    </div>
+
+    <div class="alert alert-danger" ng-show="errorUpdatingGuest">
+        <strong>Sorry my Friend!</strong> The guest could not be updated.
+    </div>
+
+</div>

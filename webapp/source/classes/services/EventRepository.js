@@ -23,6 +23,16 @@ define([], function () {
             );
         };
 
+        this.getGuestById = function( eventId, guestId, successCallback, errorCallback ){
+            $http.get( 'http://localhost:8080/api/events/' + eventId + '/guests/' + guestId).
+            success(function(data){
+                successCallback(data);
+            }).
+            error(function(){
+                errorCallback();
+            })
+        };
+
         this.addEvent = function(event, successCallback, errorCallback ){
             $http.post( 'http://localhost:8080/api/events/', event).
                 success(function(){
@@ -51,6 +61,15 @@ define([], function () {
                 error(function(){
                     errorCallback();
                 })
-        }
+        };
+        this.updateGuest = function( eventId, guestId, guest, successCallback, errorCallback ){
+            $http.post( 'http://localhost:8080/api/events/' + eventId + '/guests/' + guestId, guest).
+            success(function(){
+                successCallback();
+            }).
+            error(function(){
+                errorCallback();
+            })
+        };
     };
 });

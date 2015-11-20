@@ -21,11 +21,12 @@
         <p>Nimmt mit: {{ guest.contribution }}</p>
         <p>Kommentar: {{ guest.comment }}</p>
         <p>Komme nicht: {{ guest.canceled }}</p>
+        <form action="{{ '#/updateGuest/Event/' + event.id + '/Guest/' +  guest.id }}" method="get">
+            <button class="btn btn-sm btn-default" type="submit">Update Guest</button>
+        </form>
+    </div>
+    <div class="alert alert-danger" ng-show="errorLoadEvent">
+        <strong>Sorry my Friend!</strong> The event could not be loaded.
     </div>
 </div>
 
-<div class="alert alert-danger" ng-show="errorLoadEvent">
-    <strong>Sorry my Friend!</strong> The event could not be loaded.
-</div>
-
-</div>

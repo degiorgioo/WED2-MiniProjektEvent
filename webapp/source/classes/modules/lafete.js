@@ -1,4 +1,4 @@
-define(['angular', 'app/controllers/EventListController', 'app/controllers/EventController', 'app/controllers/NavigationController','app/controllers/NewEventController' , 'app/controllers/NewGuestController' ,'app/controllers/UpdateEventController' ,'app/services/EventRepository', 'app/models/Event' ,'angularRoute'], function (Angular,EventListController,EventController,NavigationController,NewEventController,NewGuestController,UpdateEventController,EventRepository, Event) {
+define(['angular', 'app/controllers/EventListController', 'app/controllers/EventController', 'app/controllers/NavigationController','app/controllers/NewEventController' , 'app/controllers/NewGuestController' ,'app/controllers/UpdateEventController','app/controllers/UpdateGuestController' ,'app/services/EventRepository', 'app/models/Event' ,'angularRoute'], function (Angular,EventListController,EventController,NavigationController,NewEventController,NewGuestController,UpdateEventController, UpdateGuestController,EventRepository, Event) {
 
     var Lafete = Angular.module('lafete',['ngRoute']);
 
@@ -8,6 +8,7 @@ define(['angular', 'app/controllers/EventListController', 'app/controllers/Event
     NewEventController.$inject = ['$scope', 'EventRepository'];
     NewGuestController.$inject = ['$scope', 'EventRepository', '$routeParams'];
     UpdateEventController.$inject = ['$scope', 'EventRepository'];
+    UpdateGuestController.$inject = ['$scope', 'EventRepository', '$routeParams'];
     NavigationController.$inject = ['$scope'];
 
     //set controllers
@@ -17,6 +18,7 @@ define(['angular', 'app/controllers/EventListController', 'app/controllers/Event
     Lafete.controller('NewGuestController', NewGuestController);
     Lafete.controller('UpdateEventController', UpdateEventController);
     Lafete.controller('NavigationController', NavigationController);
+    Lafete.controller('UpdateGuestController', UpdateGuestController);
 
     //set service
     Lafete.service('EventRepository', EventRepository);
@@ -41,7 +43,10 @@ define(['angular', 'app/controllers/EventListController', 'app/controllers/Event
             }).when('/newGuest/Event/:eventId', {
                 controller: 'NewGuestController',
                 templateUrl: '../views/newGuest.html'
-            })
+            }).when('/updateGuest/Event/:eventId/Guest/:guestId', {
+                controller: 'UpdateGuestController',
+                templateUrl: '../views/updateGuest.html'
+        })
     });
 
     return Lafete;
