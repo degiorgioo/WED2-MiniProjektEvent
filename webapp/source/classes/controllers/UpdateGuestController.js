@@ -20,7 +20,7 @@ define(['app/services/EventRepository'], function () {
             })
         };
         $scope.cancelGuest = function(){
-            EventRepository.cancelGuest($routeParams.eventId, $routeParams.guestId, {
+            EventRepository.updateGuest($routeParams.eventId, $routeParams.guestId, {
                 canceled: true
             }, function(){
                 showMessage('guestCanceled');

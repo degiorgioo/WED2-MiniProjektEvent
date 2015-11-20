@@ -199,7 +199,13 @@ app.get('/api/events/:id/guests', function(request, response) {
 app.post('/api/events/:id/guests', function(request, response) {
     var event = findEvent(request.params.id);
     if(event){
-        if(event.maxNumberGuests == event.guests.length){
+        var quantityActiveGuests = 0;
+        for(var i = 0; i < event.guests.length; i++){
+            if(event.guests[i].canceled == false){
+                quantityActiveGuests++;
+            }
+        }
+        if(event.maxNumberGuests == quantityActiveGuests){
             response.status(500).send('Event guestlist is full');
         }else{
             response.json(createGuest(
