@@ -1,8 +1,9 @@
 define([], function () {
-    return function ($http) {
-        //do some magic here
+    var EventRepository = function ($http, config) {
         this.getAllEvents = function( successCallback, errorCallback ){
-            $http.get( 'http://localhost:8080/api/events' )
+
+            $http.get( config.eventAPI )
+
                 .success(function (data) {
                     successCallback(data.events);
                 })
@@ -13,7 +14,7 @@ define([], function () {
         };
 
         this.getEventById = function( id , successCallback, errorCallback ){
-            $http.get( 'http://localhost:8080/api/events/' + id )
+            $http.get( config.eventAPI + id )
                 .success(function (data) {
                     successCallback(data);
                 })
@@ -24,7 +25,7 @@ define([], function () {
         };
 
         this.getGuestById = function( eventId, guestId, successCallback, errorCallback ){
-            $http.get( 'http://localhost:8080/api/events/' + eventId + '/guests/' + guestId).
+            $http.get( config.eventAPI + eventId + '/guests/' + guestId).
             success(function(data){
                 successCallback(data);
             }).
@@ -34,7 +35,7 @@ define([], function () {
         };
 
         this.addEvent = function(event, successCallback, errorCallback ){
-            $http.post( 'http://localhost:8080/api/events/', event).
+            $http.post( config.eventAPI , event).
                 success(function(){
                     successCallback();
                 }).
@@ -44,7 +45,7 @@ define([], function () {
         };
 
         this.addGuestToEvent = function(id, guest, successCallback, errorCallback ){
-            $http.post('http://localhost:8080/api/events/'+ id +'/guests', guest)
+            $http.post(config.eventAPI + id +'/guests', guest)
                 .success(function(){
                     successCallback();
                 }).
@@ -54,7 +55,7 @@ define([], function () {
         };
 
         this.updateEvent = function(id, event, successCallback, errorCallback ){
-            $http.post( 'http://localhost:8080/api/events/' + id, event).
+            $http.post( config.eventAPI + id, event).
                 success(function(){
                     successCallback();
                 }).
@@ -63,7 +64,7 @@ define([], function () {
                 })
         };
         this.updateGuest = function( eventId, guestId, guest, successCallback, errorCallback ){
-            $http.post( 'http://localhost:8080/api/events/' + eventId + '/guests/' + guestId, guest).
+            $http.post( config.eventAPI + eventId + '/guests/' + guestId, guest).
             success(function(){
                 successCallback();
             }).
@@ -72,4 +73,9 @@ define([], function () {
             })
         };
     };
+
+    EventRepository.$inject=['$http', 'ModuleConfiguration'];
+
+    return EventRepository;
+
 });

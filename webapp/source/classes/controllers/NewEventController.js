@@ -1,28 +1,15 @@
 //NewEventController
-define([], function () {
+define(['Event'], function (Event) {
 
     var NewEventController = function($scope, EventRepository){
 
         $scope.successfullAddNewEvent = false;
         $scope.errorAddNewEvent = false;
+        $scope.event = new Event();
 
         $scope.addNewEventInRepo = function(){
-            EventRepository.addEvent({
-                id: '',
-                name: $scope.eventname,
-                description: $scope.description,
-                targetGroup: $scope.target,
-                location: {
-                    name: $scope.locationname,
-                    street: $scope.locationstreet,
-                    plz: $scope.locationplz,
-                    city: $scope.locationcity
-                },
-                times: {
-                    begin: new Date($scope.eventbegin),
-                    end: new Date($scope.eventend)
-                }
-            }, function(){
+            EventRepository.addEvent($scope.event, function()
+            {
                 $scope.successfullAddNewEvent = true;
             }, function(){
                 $scope.errorAddNewEvent = true;

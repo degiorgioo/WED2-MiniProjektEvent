@@ -12,35 +12,34 @@ define([], function(){
 
         $scope.onHamburgerButtonClick = function(){
             if(isMobileExpanded){
-                $scope.disableMobileMenu();
+                disableMobileMenu();
             }else{
-                $scope.enableMobileMenu();
+                enableMobileMenu();
             }
         };
 
         $scope.onLinkClick = function(){
-            $scope.disableMobileMenu();
+            disableMobileMenu();
         };
 
-        $scope.disableMobileMenu = function(){
-            console.log("Aufruf");
+        function disableMobileMenu(){
             $scope.hamburgerClass = "navbar-toggle collapsed";
             $scope.hamburgerDataToggle = "collapse";
             $scope.hamburgerAriaExpanded = "false";
             $scope.navbarClass = "collapse navbar-collapse";
             $scope.navbarAriaExpanded = "false";
             isMobileExpanded = false;
-        };
+        }
 
-        $scope.enableMobileMenu = function(){
+        function enableMobileMenu(){
             $scope.hamburgerClass = "navbar-toggle";
             $scope.hamburgerDataToggle = "collapse";
             $scope.hamburgerAriaExpanded = "true";
             $scope.navbarClass = "navbar-collapse collapse in";
             $scope.navbarAriaExpanded = "true";
             isMobileExpanded = true;
-        };
-    }
+        }
+    };
 
     NavigationController.$inject = ['$scope'];
 

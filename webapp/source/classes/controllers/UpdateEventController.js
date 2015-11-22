@@ -1,5 +1,6 @@
 //UpdateEventController
 define([], function () {
+
     var UpdateEventController =  function($scope, EventRepository){
 
         $scope.successfullEventUpdated = false;

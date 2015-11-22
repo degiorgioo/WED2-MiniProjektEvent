@@ -49,6 +49,7 @@ define([], function () {
             }
         }
     };
+
     UpdateGuestController.$inject = ['$scope', 'EventRepository', '$routeParams'];
 
     return UpdateGuestController;

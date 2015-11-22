@@ -90,7 +90,6 @@ var event1 = createEvent(
 );
 createGuest(event1, null, "Michael", "Schoggi-Kuchen", "Bin sicher zu früh" );
 createGuest(event1, null, "Hans", "Hotdog-Cake", null );
-
 var event2 = createEvent(
     null,
     "Dinner",

@@ -1,18 +1,13 @@
-define(['angular', 'EventListController', 'EventController', 'NavigationController','NewEventController' , 'NewGuestController' ,'UpdateEventController','UpdateGuestController' ,'EventRepository','Routes' ,'angularRoute'], function (Angular,EventListController,EventController,NavigationController,NewEventController,NewGuestController,UpdateEventController, UpdateGuestController,EventRepository, Routes ) {
+define(['angular', 'NavigationController','EventRepository','ModuleConfiguration','Routes' ,'angularRoute'], function (Angular,NavigationController,EventRepository, ModuleConfiguration ,Routes ) {
 
     var Lafete = Angular.module('lafete',['ngRoute']);
 
     //set controllers
-    Lafete.controller('EventListController', EventListController);
-    Lafete.controller('EventController', EventController);
-    Lafete.controller('NewEventController', NewEventController);
-    Lafete.controller('NewGuestController', NewGuestController);
-    Lafete.controller('UpdateEventController', UpdateEventController);
     Lafete.controller('NavigationController', NavigationController);
-    Lafete.controller('UpdateGuestController', UpdateGuestController);
 
-    //set service
+    // set service
     Lafete.service('EventRepository', EventRepository);
+    Lafete.service('ModuleConfiguration', ModuleConfiguration);
 
     //set routes
     Lafete.config(Routes);

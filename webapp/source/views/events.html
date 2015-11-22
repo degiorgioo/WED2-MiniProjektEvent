@@ -1,4 +1,4 @@
-<div data-ng-controller="EventListController">
+<div>
     <div class="eventContainer" data-ng-repeat="event in events" ng-click="onClickEventContainer()">
         <h1>{{ event.name }}</h1>
         <p>Description: {{ event.description }}</p>
@@ -19,3 +19,7 @@
 
 
 </div>
+
+<!--
+data-ng-controller="EventListController"
+-->

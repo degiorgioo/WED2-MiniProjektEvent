@@ -12,8 +12,10 @@ require.config({
         'UpdateEventController': 'classes/controllers/UpdateEventController',
         'UpdateGuestController': 'classes/controllers/UpdateGuestController',
         'EventRepository': 'classes/services/EventRepository',
+        'ModuleConfiguration': 'classes/services/ModuleConfiguration',
         'lafete':'classes/modules/lafete',
         'Event': 'classes/models/Event',
+        'Guest': 'classes/models/Guest',
         'Routes':'classes/configs/Routes'
     },
     // angular does not support async loading out of the box -> use the shim loader
