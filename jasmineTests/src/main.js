@@ -10,7 +10,14 @@ require.config({
         'lafeteTests': 'src/modules/lafeteTests',
         'eventListControllerTest': 'src/controllers/EventListControllerTest',
         'eventControllerTest': 'src/controllers/EventControllerTest',
+        'eventRepositoryTest': 'src/controllers/eventRepositoryTest',
+        'eventCreationTest': 'src/controllers/eventCreationTest',
+        'guestCreationTest': 'src/controllers/guestCreationTest',
         'eventRepository': '../webapp/source/classes/services/EventRepository',
+        'newEventController': '../webapp/source/classes/controllers/NewEventController',
+        'newGuestController': '../webapp/source/classes/controllers/NewGuestController',
+        'Event': '../webapp/source/classes/models/Event',
+        'Guest': '../webapp/source/classes/models/Guest',
         'configuration': '../webapp/source/classes/services/ModuleConfiguration'
 
     },
@@ -36,7 +43,7 @@ require.config({
 });
 
 require(['jasmine-boot'], function () {
-    require(['eventListControllerTest', 'eventControllerTest'], function(){
+    require(['eventListControllerTest', 'eventControllerTest', 'eventCreationTest', 'guestCreationTest', 'eventRepositoryTest'], function(){
         window.onload();
     });
 });

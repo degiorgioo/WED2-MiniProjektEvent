@@ -6,10 +6,8 @@ define(['Event'], function (Event) {
         $scope.successfullAddNewEvent = false;
         $scope.errorAddNewEvent = false;
         $scope.event = new Event();
-        this.scope = $scope;
-        this.test = "test";
 
-        this.scope.addNewEventInRepo = function(){
+        $scope.addNewEventInRepo = function(){
             EventRepository.addEvent($scope.event, function()
             {
                 $scope.successfullAddNewEvent = true;

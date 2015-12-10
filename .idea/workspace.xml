@@ -1,26 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad14dde6-24b1-40e8-80dc-802e6ba451a9" name="Default" comment="Added Jasmine Tests Suit">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jasmineTests/src/libraries/jasmine/jasmine_favicon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jasmineTests/SpecRunner.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jasmineTests/src/controllers/EventControllerTest.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jasmineTests/src/controllers/EventListControllerTest.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jasmineTests/src/libraries/angular/angular-route.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jasmineTests/src/libraries/angular/angular.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jasmineTests/src/libraries/angular/angularMock.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jasmineTests/src/libraries/jasmine/boot.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jasmineTests/src/libraries/jasmine/console.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jasmineTests/src/libraries/jasmine/jasmine-html.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jasmineTests/src/libraries/jasmine/jasmine.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jasmineTests/src/libraries/jasmine/jasmine.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jasmineTests/src/libraries/require/require.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jasmineTests/src/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jasmineTests/src/models/Event.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jasmineTests/src/models/Guest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="ad14dde6-24b1-40e8-80dc-802e6ba451a9" name="Default" comment="Added Jasmine Tests &amp; a few optimizations">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jasmineTests/src/controllers/EventCreationTest.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jasmineTests/src/controllers/EventRepositoryTest.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jasmineTests/src/controllers/GuestCreationTest.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webapp/source/classes/controllers/NewEventController_old.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webapp/source/classes/controllers/NewGuestController_old.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jasmineTests/src/controllers/EventControllerTest.js" afterPath="$PROJECT_DIR$/jasmineTests/src/controllers/EventControllerTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jasmineTests/src/main.js" afterPath="$PROJECT_DIR$/jasmineTests/src/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/source/classes/controllers/NewEventController.js" afterPath="$PROJECT_DIR$/webapp/source/classes/controllers/NewEventController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/source/classes/controllers/NewGuestController.js" afterPath="$PROJECT_DIR$/webapp/source/classes/controllers/NewGuestController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/source/views/newGuest.html" afterPath="$PROJECT_DIR$/webapp/source/views/newGuest.html" />
     </list>
     <ignored path="WED2-MiniProjEvent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,67 +44,87 @@
         <entry file="file://$PROJECT_DIR$/jasmineTests/src/controllers/EventControllerTest.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="30" selection-end-column="11" />
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventRepository.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/source/classes/services/EventRepository.js">
+      <file leaf-file-name="EventRepositoryTest.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jasmineTests/src/controllers/EventRepositoryTest.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="76" column="58" selection-start-line="76" selection-start-column="58" selection-end-line="76" selection-end-column="58" />
+              <caret line="1" column="70" selection-start-line="1" selection-start-column="70" selection-end-line="1" selection-end-column="70" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="angular-route.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/jasmineTests/src/libraries/angular/angular-route.js">
+      <file leaf-file-name="EventCreationTest.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jasmineTests/src/controllers/EventCreationTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7753378">
-              <caret line="470" column="46" selection-start-line="470" selection-start-column="46" selection-end-line="470" selection-end-column="46" />
-              <folding>
-                <marker date="1449238057752" expanded="true" signature="11427:12174" placeholder="..." />
-                <marker date="1449238057752" expanded="true" signature="12714:12867" placeholder="{...}" />
-                <marker date="1449238057752" expanded="true" signature="12949:13058" placeholder="{...}" />
-                <marker date="1449238057752" expanded="true" signature="13143:13255" placeholder="{...}" />
-                <marker date="1449238057752" expanded="true" signature="13327:14085" placeholder="{...}" />
-                <marker date="1449238057752" expanded="true" signature="13506:13776" placeholder="{...}" />
-                <marker date="1449238057752" expanded="true" signature="13605:13759" placeholder="{...}" />
-                <marker date="1449238057752" expanded="true" signature="14243:14830" placeholder="{...}" />
-                <marker date="1449238057752" expanded="true" signature="27896:28610" placeholder="..." />
-                <marker date="1449238057752" expanded="true" signature="28221:28291" placeholder="..." />
-                <marker date="1449238057752" expanded="true" signature="28669:28774" placeholder="..." />
-                <marker date="1449238057752" expanded="true" signature="28836:28998" placeholder="..." />
-                <marker date="1449238057752" expanded="true" signature="29082:29268" placeholder="{...}" />
-                <marker date="1449238057752" expanded="true" signature="29292:29327" placeholder="{...}" />
-                <marker date="1449238057752" expanded="true" signature="29384:29762" placeholder="{...}" />
-                <marker date="1449238057752" expanded="true" signature="29795:29827" placeholder="{...}" />
-                <marker date="1449238057752" expanded="true" signature="29875:29904" placeholder="{...}" />
-                <marker date="1449238057752" expanded="true" signature="29952:29985" placeholder="{...}" />
-                <marker date="1449238057752" expanded="true" signature="30115:30698" placeholder="[...]" />
-                <marker date="1449238057752" expanded="true" signature="30211:30697" placeholder="{...}" />
-                <marker date="1449238057752" expanded="true" signature="30281:30425" placeholder="{&quot;templateUrl&quot;: 'book.html'...}" />
-                <marker date="1449238057752" expanded="true" signature="30480:30633" placeholder="{&quot;templateUrl&quot;: 'chapter.html'...}" />
-                <marker date="1449238057752" expanded="true" signature="30734:30968" placeholder="[...]" />
-                <marker date="1449238057752" expanded="true" signature="30828:30967" placeholder="{...}" />
-                <marker date="1449238057752" expanded="true" signature="31004:31134" placeholder="[...]" />
-                <marker date="1449238057752" expanded="true" signature="31044:31133" placeholder="{...}" />
-                <marker date="1449238057752" expanded="true" signature="31173:31306" placeholder="[...]" />
-                <marker date="1449238057752" expanded="true" signature="31213:31305" placeholder="{...}" />
-                <marker date="1449238057752" expanded="true" signature="31443:31976" placeholder="{...}" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="newGuest.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/source/views/newGuest.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.730769">
+              <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GuestCreationTest.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jasmineTests/src/controllers/GuestCreationTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewEventController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/source/classes/controllers/NewEventController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewGuestController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/source/classes/controllers/NewGuestController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jasmineTests/src/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.11486486">
+              <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jasmineTests/src/main.js">
+        <entry file="file://$USER_HOME$/Downloads/Telegram Desktop/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+              <caret line="44" column="83" selection-start-line="44" selection-start-column="62" selection-end-line="44" selection-end-column="83" />
               <folding />
             </state>
           </provider>
@@ -154,7 +166,6 @@
         <option value="$PROJECT_DIR$/webapp/source/classes/conifgs/routes.js" />
         <option value="$PROJECT_DIR$/webapp/source/classes/controllers/UpdateGuestController.js" />
         <option value="$PROJECT_DIR$/webapp/source/classes/models/Event.js" />
-        <option value="$PROJECT_DIR$/webapp/source/classes/controllers/NewEventController.js" />
         <option value="$PROJECT_DIR$/webapp/source/classes/controllers/NewGuestController.js" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/webapp/source/classes/models/Guest.js" />
@@ -164,7 +175,6 @@
         <option value="$PROJECT_DIR$/webapp/source/views/eventDetails.html" />
         <option value="$PROJECT_DIR$/webapp/source/views/newEvent.html" />
         <option value="$PROJECT_DIR$/webapp/source/views/updateEvent.html" />
-        <option value="$PROJECT_DIR$/webapp/source/views/newGuest.html" />
         <option value="$PROJECT_DIR$/webapp/source/views/updateGuest.html" />
         <option value="$PROJECT_DIR$/webapp/source/classes/controllers/EventController.js" />
         <option value="$PROJECT_DIR$/webapp/source/classes/controllers/EventListController.js" />
@@ -174,6 +184,14 @@
         <option value="$PROJECT_DIR$/webapp/source/classes/configs/Routes.js" />
         <option value="$PROJECT_DIR$/webapp/source/classes/modules/lafete.js" />
         <option value="$PROJECT_DIR$/webapp/source/classes/services/ModuleConfiguration.js" />
+        <option value="$PROJECT_DIR$/jasmineTests/src/controllers/EventControllerTest.js" />
+        <option value="$PROJECT_DIR$/jasmineTests/src/controllers/NewGuestControllerTest.js" />
+        <option value="$PROJECT_DIR$/jasmineTests/src/controllers/NewEventControllerTest.js" />
+        <option value="$PROJECT_DIR$/jasmineTests/src/controllers/EventRepositoryTest.js" />
+        <option value="$PROJECT_DIR$/webapp/source/classes/controllers/NewEventController.js" />
+        <option value="$PROJECT_DIR$/jasmineTests/src/main.js" />
+        <option value="$PROJECT_DIR$/jasmineTests/src/controllers/GuestCreationTest.js" />
+        <option value="$PROJECT_DIR$/webapp/source/views/newGuest.html" />
       </list>
     </option>
   </component>
@@ -238,6 +256,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -454,7 +474,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="configs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -608,10 +640,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WED2-MiniProjEvent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WED2-MiniProjektEvent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -627,9 +671,12 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\grein\OneDrive\Studium\WED2_HS2015\Miniprojekt\WED2-MiniProjektEvent\webapp\source\classes\controllers" />
+      <recent name="C:\Users\grein\OneDrive\Studium\WED2_HS2015\Miniprojekt\WED2-MiniProjektEvent\jasmineTests\src\controllers" />
       <recent name="$PROJECT_DIR$/webapp/source/classes/controllers" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\grein\OneDrive\Studium\WED2_HS2015\Miniprojekt\WED2-MiniProjektEvent\jasmineTests\src\controllers" />
       <recent name="C:\Users\grein\OneDrive\Studium\WED2_HS2015\Miniprojekt\WED2-MiniProjektEvent" />
       <recent name="$PROJECT_DIR$/webapp/source/classes/services" />
       <recent name="$PROJECT_DIR$/webapp/source/classes/controllers" />
@@ -704,6 +751,13 @@
       <option name="number" value="Default" />
       <updated>1446112199488</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added Jasmine Tests Suit">
+      <created>1449406410614</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1449406410614</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -719,16 +773,17 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31556502" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32957503" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33694476" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15085287" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -737,7 +792,6 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32957503" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -755,7 +809,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Jasmine Tests" />
     <MESSAGE value="Added Jasmine Tests Suit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Jasmine Tests Suit" />
+    <MESSAGE value="Added Jasmine Tests &amp; a few optimizations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Jasmine Tests &amp; a few optimizations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -764,70 +819,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/webapp/source/classes/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/source/classes/modules/lafete.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/source/classes/controllers/EventListController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="58" selection-start-line="0" selection-start-column="58" selection-end-line="0" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/source/classes/services/EventRepository.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/source/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/source/classes/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/source/classes/modules/lafete.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/source/classes/controllers/EventListController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/source/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/source/classes/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -899,23 +890,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webapp/source/css/bootstrap-theme.css.map">
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webapp/source/css/bootstrap.css.map">
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webapp/source/css/style.css">
@@ -981,13 +972,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/source/views/newGuest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/source/views/updateEvent.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
@@ -1009,53 +993,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.875">
-          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/source/classes/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/source/classes/controllers/NewEventController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="20" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/source/classes/controllers/NewGuestController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/source/classes/services/ModuleConfiguration.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12473795">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jasmineTests/src/models/Event.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/source/classes/controllers/EventController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3207547">
-          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1066,27 +1007,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/source/classes/configs/Routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39203355">
-          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/source/classes/controllers/EventListController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10691824">
-          <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/source/classes/modules/lafete.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2494759">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/source/classes/models/Guest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16037735">
@@ -1094,73 +1014,187 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jasmineTests/src/controllers/EventControllerTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="30" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.89602447">
           <caret line="221" column="0" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jasmineTests/src/libraries/angular/angular-route.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="470" column="46" selection-start-line="470" selection-start-column="46" selection-end-line="470" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jasmineTests/src/libraries/jasmine/jasmine.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1412" column="32" selection-start-line="1412" selection-start-column="32" selection-end-line="1412" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/source/classes/controllers/EventListController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="45" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21518987">
+          <caret line="11" column="57" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/source/classes/controllers/NewGuestController_old.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jasmineTests/src/controllers/EventListControllerTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/source/classes/services/ModuleConfiguration.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22793296">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../02-Uebung/U05-U09-Angular/2-Miniprojekt/server/api/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9392265">
+          <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/source/classes/configs/Routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/source/classes/controllers/EventController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24692738">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/source/classes/modules/lafete.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17094973">
+          <caret line="9" column="61" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jasmineTests/src/controllers/EventRepositoryTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="70" selection-start-line="1" selection-start-column="70" selection-end-line="1" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/source/classes/controllers/NewEventController_old.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22793296">
+          <caret line="12" column="39" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jasmineTests/src/controllers/EventControllerTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/source/classes/controllers/NewEventController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/source/classes/controllers/NewGuestController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webapp/source/classes/services/EventRepository.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.028716216">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/source/classes/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5456081">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/Telegram Desktop/main.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="58" selection-start-line="76" selection-start-column="58" selection-end-line="76" selection-end-column="58" />
+          <caret line="44" column="83" selection-start-line="44" selection-start-column="62" selection-end-line="44" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jasmineTests/src/controllers/GuestCreationTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jasmineTests/src/controllers/EventCreationTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/source/views/newGuest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.730769">
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jasmineTests/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.11486486">
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jasmineTests/src/libraries/angular/angular-route.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7753378">
-          <caret line="470" column="46" selection-start-line="470" selection-start-column="46" selection-end-line="470" selection-end-column="46" />
-          <folding>
-            <marker date="1449238057752" expanded="true" signature="11427:12174" placeholder="..." />
-            <marker date="1449238057752" expanded="true" signature="12714:12867" placeholder="{...}" />
-            <marker date="1449238057752" expanded="true" signature="12949:13058" placeholder="{...}" />
-            <marker date="1449238057752" expanded="true" signature="13143:13255" placeholder="{...}" />
-            <marker date="1449238057752" expanded="true" signature="13327:14085" placeholder="{...}" />
-            <marker date="1449238057752" expanded="true" signature="13506:13776" placeholder="{...}" />
-            <marker date="1449238057752" expanded="true" signature="13605:13759" placeholder="{...}" />
-            <marker date="1449238057752" expanded="true" signature="14243:14830" placeholder="{...}" />
-            <marker date="1449238057752" expanded="true" signature="27896:28610" placeholder="..." />
-            <marker date="1449238057752" expanded="true" signature="28221:28291" placeholder="..." />
-            <marker date="1449238057752" expanded="true" signature="28669:28774" placeholder="..." />
-            <marker date="1449238057752" expanded="true" signature="28836:28998" placeholder="..." />
-            <marker date="1449238057752" expanded="true" signature="29082:29268" placeholder="{...}" />
-            <marker date="1449238057752" expanded="true" signature="29292:29327" placeholder="{...}" />
-            <marker date="1449238057752" expanded="true" signature="29384:29762" placeholder="{...}" />
-            <marker date="1449238057752" expanded="true" signature="29795:29827" placeholder="{...}" />
-            <marker date="1449238057752" expanded="true" signature="29875:29904" placeholder="{...}" />
-            <marker date="1449238057752" expanded="true" signature="29952:29985" placeholder="{...}" />
-            <marker date="1449238057752" expanded="true" signature="30115:30698" placeholder="[...]" />
-            <marker date="1449238057752" expanded="true" signature="30211:30697" placeholder="{...}" />
-            <marker date="1449238057752" expanded="true" signature="30281:30425" placeholder="{&quot;templateUrl&quot;: 'book.html'...}" />
-            <marker date="1449238057752" expanded="true" signature="30480:30633" placeholder="{&quot;templateUrl&quot;: 'chapter.html'...}" />
-            <marker date="1449238057752" expanded="true" signature="30734:30968" placeholder="[...]" />
-            <marker date="1449238057752" expanded="true" signature="30828:30967" placeholder="{...}" />
-            <marker date="1449238057752" expanded="true" signature="31004:31134" placeholder="[...]" />
-            <marker date="1449238057752" expanded="true" signature="31044:31133" placeholder="{...}" />
-            <marker date="1449238057752" expanded="true" signature="31173:31306" placeholder="[...]" />
-            <marker date="1449238057752" expanded="true" signature="31213:31305" placeholder="{...}" />
-            <marker date="1449238057752" expanded="true" signature="31443:31976" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
