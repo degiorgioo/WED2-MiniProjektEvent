@@ -7,9 +7,12 @@ define([], function () {
             this.description = "";
             this.targetGroup = "";
             this.location = {name: "", street: "", zipCode: "", city: ""};
-            this.times = {begin: "", end: ""};
+            this.times = {};
+            this.times.begin = new Date();
+            this.times.end = new Date();
             this.guests = [];
     };
+
 
     return Event;
 

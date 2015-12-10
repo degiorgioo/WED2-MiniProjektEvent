@@ -1,5 +1,5 @@
 //UpdateEventController
-define([], function () {
+define(['Event'], function (Event) {
 
     var UpdateEventController =  function($scope, EventRepository){
 
@@ -15,7 +15,10 @@ define([], function () {
 
 
         $scope.pinCurrentEventToScope = function(event){
+            $scope.event = new Event();
             $scope.event = event;
+            $scope.event.times.begin = new Date(event.times.begin);
+            console.log($scope.event);
             $scope.event.times.begin = new Date(event.times.begin);
             $scope.event.times.end = new Date(event.times.end);
         };

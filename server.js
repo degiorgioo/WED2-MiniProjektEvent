@@ -28,7 +28,10 @@ function createEvent(id, name, description, targetGroup, contributionsDescriptio
             targetGroup: targetGroup,
             contributionsDescription: contributionsDescription,
             location:location,
-            times : times,
+            times : {
+                begin: new Date(times.begin),
+                end: new Date(times.end)
+            },
             guests:[],
             maxNumberGuests: maxNumberGuests
         };
