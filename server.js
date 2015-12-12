@@ -28,10 +28,7 @@ function createEvent(id, name, description, targetGroup, contributionsDescriptio
             targetGroup: targetGroup,
             contributionsDescription: contributionsDescription,
             location:location,
-            times : {
-                begin: new Date(times.begin),
-                end: new Date(times.end)
-            },
+            times : times,
             guests:[],
             maxNumberGuests: maxNumberGuests
         };
@@ -106,8 +103,8 @@ var event2 = createEvent(
         city: "Rapperswil"
     },
     {
-        begin: new Date(2015, 9, 22),
-        end: new Date(2015, 9, 23)
+        begin: new Date(),
+        end: new Date()
     }, 10
 );
 
@@ -119,7 +116,7 @@ createGuest(event2, null, "F. Meier", null, null );
  */
 var app = express();
 app.use(allowCrossDomain);
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 app.use('/api', express.static(__dirname + '/api'));
 app.use('/', express.static(__dirname + '/webapp/source'));
 // tests, remove this for production

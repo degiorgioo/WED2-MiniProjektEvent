@@ -1,19 +1,10 @@
-define([], function () {
+define(['Event'], function (Event) {
     var EventRepository = function ($http, config) {
         this.getAllEvents = function( successCallback, errorCallback ){
             $http.get( config.eventAPI )
                 .success(function (data) {
-                    //data.events.times.end = new Date(data.times.end);
-                    //data.events.times.begin = new Date(data.times.begin);
-                    //console.log(data);
-
-                    for(var i = 0; i < data.events.length; i++){
-                        data.events[i].times.begin = new Date(data.events[i].times.begin);
-                        data.events[i].times.end = new Date(data.events[i].times.end);
-                    }
-                    console.log(data);
-
-                    successCallback(data.events);
+                    var array = Event.EventFactoryCreateEventFromArray(data.events);
+                    successCallback(array);
                 })
                 .error(function () {
                     errorCallback();
@@ -24,10 +15,8 @@ define([], function () {
         this.getEventById = function( id , successCallback, errorCallback ){
             $http.get( config.eventAPI + id )
                 .success(function (data) {
-                    data.times.end = new Date(data.times.end);
-                    data.times.begin = new Date(data.times.begin);
-                    console.log(data);
-                    successCallback(data);
+                    var event = Event.EventFactoryCreateEvent(data);
+                    successCallback(event);
                 })
                 .error(function () {
                     errorCallback();
